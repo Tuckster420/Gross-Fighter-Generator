@@ -18,6 +18,7 @@ MAX_COUNT = 10000
 JPEG_QUALITY = 90
 PREVIEW_COUNT = 12
 DEFAULT_COUNT = 100
+DEFAULT_OUTPUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
 
 GENDER_OPTS = [("Male", "male"), ("Female", "female"), ("Random", None)]
 CATEGORY_OPTS = [(c.capitalize(), c) for c in CATEGORIES] + [("Random", None)]
@@ -334,7 +335,7 @@ class App:
 
         self.count_text = str(DEFAULT_COUNT)
         self.seed_text = ""
-        self.folder_text = os.path.abspath("output")
+        self.folder_text = DEFAULT_OUTPUT
         self.gender = None
         self.category = None
         self.style = "gross"
